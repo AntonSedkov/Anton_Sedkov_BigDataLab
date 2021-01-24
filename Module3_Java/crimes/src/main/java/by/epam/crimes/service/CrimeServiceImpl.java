@@ -80,18 +80,4 @@ public class CrimeServiceImpl implements CrimeService {
         return result;
     }
 
-   /* public static void main(String[] args) throws ProjectException {
-        boolean res = new CrimeServiceImpl()
-                .saveToDatabase("E:\\Data Lab\\Anton_Sedkov_BigDataLab\\Module3_Java\\crimes\\input\\LondonStations.csv",
-                "2020-10");
-    }*/
-
-    /*public static void main(String[] args) throws ProjectException {
-        boolean res = new CrimeServiceImpl()
-                .saveToFile(
-                        "E:\\Data Lab\\Anton_Sedkov_BigDataLab\\Module3_Java\\crimes\\output",
-                        "E:\\Data Lab\\Anton_Sedkov_BigDataLab\\Module3_Java\\crimes\\input\\LondonStations.csv",
-                        "2020-10");
-    }*/
-
 }

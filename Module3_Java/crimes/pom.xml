@@ -10,8 +10,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.11</maven.compiler.source>
-        <maven.compiler.target>1.11</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <commonscli.version>1.4</commonscli.version>
         <hikaricp.version>3.4.5</hikaricp.version>
         <postgresql.version>42.2.18</postgresql.version>
@@ -70,66 +70,18 @@
         </dependency>
     </dependencies>
 
-    <!--Добавим в наш “pom.xml” конфигурацию, которая будет собирать jar-файл, который можно запускать с консоли -->
-    <build>
+  <!--  <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.0</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>ru.urvanov.javaexamples.commonscli.App</mainClass>
-                                </transformer>
-                            </transformers>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>org.prettypets.virtualpets.client.swing.MainClass</mainClass>
-                            <addClasspath>true</addClasspath>
-                            <classpathPrefix>data/lib/</classpathPrefix>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}/data/lib</outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <mainClass>by.epam.crimes.App</mainClass>
+                    <commandlineArgs>&#45;&#45;Dinputfile="E:\Data Lab\Anton_Sedkov_BigDataLab\Module3_Java\crimes\input\LondonStations.csv" &#45;&#45;Doutdir="E:\Data Lab\Anton_Sedkov_BigDataLab\Module3_Java\crimes\output" &#45;&#45;Dmdate="2019-05"
+                    </commandlineArgs>
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 
 </project>
